@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: url('/326780-P9JGF8-718.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.background{
+    width: 60%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: ". under";
+}
+
+.underConstruction{
+    grid-area: under;
+    margin: auto right;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    grid-template-areas: "text img"
+                        "redes redes";
+    margin-right: 10rem;
+}
+
+.img{
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img{
+    width: 60%;
+    height: auto;
+}
+
+.text{
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.text h1{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.text p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.redes{
+    grid-area: redes;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.redes_text p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.redes a{
+    padding-top: 20px;
+    padding-right: 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+.redes_scn a i{
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+    transition: all 5ms;
+}
+
+.redes_scn a:hover i{
+    transform: scale(1.2);
+}
+
+.redes a i{
+    font-size: 3rem;
+}
+
+.redes_phone{
+    margin-top: 20px;
+}
+
+.redes_phone a{
+    color: #000;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 36px;
+    transition: all 5ms;
+}
+
+.redes_phone a:hover i{
+    transform: scale(1.2);
+}
+
+.redes_phone a i{
+    width: 24px;
+    line-height: 36px;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 1024px){
+    .background{
+        width: 70%;
+    }
+
+    .underConstruction{
+        margin-top: 3rem;
+        margin-right: 5rem;
+    }
+
+    .text h1{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .container{
+        background-position: left;
+        justify-content: center;
+    }
+
+    .background{
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "under";
+    }
+
+    .img img{
+        width: 70%;
+    }
+
+    .underConstruction{
+        grid-area: under;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "img"
+                            "text"
+                            "redes";
+        margin-right: 0;
+        padding: 1rem;
+        background: rgba(0,0,0,0.6);
+        border-radius: 15px;
+        grid-gap: 15px;
+    }
+
+    .text h1{
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .text p{
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    .redes a{
+        color: #fff;
+    }
+
+    .redes_text p{
+        color: #fff;
+        font-size: 2rem;
+        margin-top: 0;
+    }
+}
